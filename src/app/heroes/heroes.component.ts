@@ -5,21 +5,21 @@ import { HeroeService } from '../shared/heroe.service';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css']
+  styleUrls: ['./heroes.component.css'],
+  
 })
 
 export class HeroesComponent implements OnInit {
 
-  misHeroes:Heroe[]=[];
+ 
 
   constructor(public miservicio:HeroeService) { 
-    console.log("constructor de Heroes");
+    
   }
 
   ngOnInit(): void {
-    console.log("ngOnit de Heroes");
-    this.misHeroes=this.miservicio.getHeroes();
-    console.log(this.misHeroes);
+ 
   }
 
+  
 }

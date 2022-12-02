@@ -1,21 +1,32 @@
-<table class="table table-dark" id="listado" >
-<thead>
-    <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Apellidos</th>
-        <th scope="col">Correo</th>
-        <th scope="col">Sexo</th>
-        <th scope="col">Fecha de Nacimiento</th>
-    </tr>
-</thead>
-<thead *ngFor="let perfil of perfil; let i = index">
-        <th scope="col">{{perfil.Nombre}}</th>
-        <th scope="col">{{perfil.Apellidos}}</th>
-        <th scope="col">{{perfil.Correo}}</th>
-        <th scope="col">{{perfil.Sexo}}</th>
-        <th scope="col">{{perfil.FechaNac}}</th>
-</thead>
+<div class="row">
+    <select class="form-select" id="YoutubeSelect" onchange="YoutubeRequest()" style="width:200px ; border-radius:10px">
+        <option value="0">Top Hits Mexico</option>
+        <option value="1">Top Worldwide</option>
+        <option value="2">Top Hits Argentina</option>
+        <option value="3">Top Hits USA</option>
+    </select>
+    <div class="col-12" style="text-align:center ; ">
+        <img src="assets/img/youtube-music-logo.png" style="width:300px;height:300px;">
+        <H1 id="EncabezadoYT"></H1>
+      
+    </div>
+    <div class="col-12" style="text-align:center ;overflow:auto; height:300px;">
+        
+        <table class="col-12"  >
+            <thead   style="background-color:black ;color:azure;">
+                <tr>
+                    <td class="col-4">RANKING</td>
+                    <td class="col-4">CANCION</td>
+                    <td class="col-4">ARTISTA</td>
+                   
+                </tr>
+            </thead>
+            <tbody id="YoutubeTabla" >
+                
+            </tbody>
+        </table>
+    </div>
+</div>
 
-
-</table>
+<script type="text/javascript" src="Scripts/Peticiones.js"></script>
 
