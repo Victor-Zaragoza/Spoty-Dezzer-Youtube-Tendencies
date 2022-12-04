@@ -30,7 +30,7 @@ app.get('/user/:id', (req, res) => {
 app.get('/saveinfo/:id', (req,res) => {
     let gID = req.params.id;
     
-    fs.appendFile('//192.168.56.1/prueba/docuemnto3.txt', 'texto que contiene el documento etc', 
+    fs.appendFile('//192.168.56.1/prueba/documento4.txt', 'texto que contiene el documento etc', 
         (error) =>{
             if(error)
                 throw error;

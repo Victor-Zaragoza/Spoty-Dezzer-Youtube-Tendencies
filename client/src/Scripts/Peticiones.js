@@ -1,12 +1,26 @@
+import {HttpClient} from '@angular/common/http';
+
+API_URI = 'http://localhost:3000/saveinfo';
+
+http = new HttpClient();
+
+
+
 document.addEventListener("DOMContentLoaded", async function (event) {
 
 	await DezeerRequest();
 	await SpotifyRequest();
 	await YoutubeRequest();
+	getProperty(id)
 	imprimir();
 
 })
 
+function getProperty(id){
+	console.log("fjdk")
+	return this.http.get(`${this.API_URI}/${id}`);
+	
+}
 
 
 async function DezeerRequest(){
